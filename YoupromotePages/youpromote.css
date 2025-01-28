@@ -5,10 +5,7 @@
     overflow-x: hidden;
 
 }
-.nav-hidden{
-    width: 0;
-}
-.nav-class{
+.nav-class {
     display: flex;
     position: fixed;
     width: 100%;
@@ -17,122 +14,96 @@
     align-items: center;
     background-color: #333;
     color: white;
-
-    
+    z-index: 10;
 }
-.logoMenu a{
+
+.logoMenu a {
     font-size: 30px;
     color: white;
     text-decoration: none;
     cursor: pointer;
-   
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     font-size: 1.2rem;
-    color: white;
-    align-items: center;
     list-style-type: none;
-    
-   
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
-.nav-links li{
-     margin: 0 10px;
-}
-.nav-links a{
-    text-decoration: none; 
-    color: white;
-}
-.signUpBtn:hover, .nav-links a:hover{
-    background-color: rgb(167, 82, 82);
-    transform: scaleY(1.1);
-    border-radius: 10px;
-}
-.dropbtw:hover{
-    background-color: grey;
-    width: 60px;
-    height: 30px;
-    color: white;
-    cursor: pointer;
 
+.nav-links li {
+    margin: 0 10px;
 }
-.menu-icon{
-    font-size: 30px;
-    display: none;
-    cursor: pointer;
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
 }
-.signUpBtn{
-    background-color: blue;
+
+.signUpBtn:hover,
+.nav-links a:hover {
+    background-color: rgb(167, 82, 82);
+    transform: scale(1.1);
     border-radius: 10px;
-    color: #fff;
-    font-size: 15px;
-    padding: 5 15px;
-    height: 30px;
-    border: none;
-    
 }
-.dropdown{
+
+.dropdown {
     position: relative;
     display: inline-block;
 }
-.dropdown button{
-    list-style-type: none;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-.dropdown-content{
+
+.dropdown-content {
     display: none;
     position: absolute;
-    /* z-index: 1; */
     background-color: white;
     min-width: 150px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
-.dropdown-content a{
+
+.dropdown-content a {
     padding: 10px 15px;
     color: black;
-    background-color: #fff;
     text-decoration: none;
-    display: block;
-    
-}
-.dropdown-content a:hover{
-    background-color: darkgray;
-}
-.show{
     display: block;
 }
 
+.dropdown-content a:hover {
+    background-color: darkgray;
+}
+
+.show {
+    display: block;
+}
+
+.menu-icon {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
-    
-    .nav-links{
+    .nav-links {
         display: none;
         flex-direction: column;
-        width:50%;
-        height: 100%;line-height: 2.5;
         position: absolute;
         top: 60px;
         right: 0;
         background-color: #333;
+        width: 50%;
         padding: 20px;
         z-index: 1;
     }
-    .nav-links.active{
-        display: flex;
-        position: fixed;
-        margin: 0;
-        padding: 0;
 
-    }.nav-links li{
-        margin: 5px 0;
+    .nav-links.active {
+        display: flex;
     }
-    .menu-icon{
+
+    .menu-icon {
         display: block;
-       
     }
+
     .heroBody{
         height: 100%;
     }
@@ -150,54 +121,42 @@
     .herobodyabout p{
         margin: 30px;
     }
-    .inputarea {
+    .inputarea{
         width: 100%;
+       
     }
-    .inputarea button{
-     width: 100%;
+    .searchBtn {
+       margin: 20px;
     }
-    .activity{
+    .searchBtn button{
+    border-radius: 0.375rem;
+ 
+   padding: 0;
+   font-size: 16px; 
+    }
+    /* .activity{
         display: block;
         width: auto;
         margin: auto;
 
-    }
-    .carddetails{
-   justify-content: center !important;
-  box-sizing: border-box;
-  padding: 0 20px;
-    }
-    .cards{
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-    }
-
+    } */
+ 
 }
-@media screen and (max-width: 767px) {
-    .cards {
-      grid-template-columns: 1fr; /* Single column layout for smaller screens */
-      gap: 20px;
-      padding: 5px;
-    }
-  }
-  @media screen and (max-width: 1023px) and (min-width: 768px) {
-    .cards {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 30px;
-    }
-  }
+
 .heroBody{
     text-align: center;
-    padding: 50px;
-    
+    padding: 30px auto;
+    margin: 30px 0;
     width: 100%;
     background-color: rgb(17, 50, 100);
-    z-index: -1;
-    height: 600px;
+    
+    /* z-index: -1; */
+    /* height: 500px; */
 }
 .herobodyhead{
     text-align: center;
-    padding: 50px;
+    padding: 50px 0;
+   
     color: #fff;
     font-size: 40px;
     justify-self: center;
@@ -210,66 +169,179 @@
     font-family: "Audiowide", sans-serif;
 }
 .inputarea{
-    margin: 30px auto;
+    margin: 2px ;
+    padding-bottom: 2px;
+    /* z-index: 1; */
     width: 100%;
-    max-width: 550px;
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+
+    /* max-width: 35.72rem;
+    position: relative;
     background-color: #fff;
     border-radius: 10px;
-    align-items: center;
-    display: flex;
+   ;
+    ; */
+
+    
 }
-.inputarea button{
-    float: right;
-    margin: 10px 15px;
-    width: 150px;
+.searchBtn{
+position: relative;
+
+align-items: center;
+
+
+
+}
+.searchBtn button{
+    /* display: inline-block; */
+    /* display: flex; */
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
     height: 50px;
-    font-size: 15px;
+    font-size: 25px;
     background-color: rgb(243, 152, 119);
-   border: none;
+   border-radius: 18px;
     color: #fff;
     cursor: pointer;
 }
-.inputarea button:hover{
+.searchBtn button:hover{
     background-color: red;
     cursor: pointer;
 }
 .inputarea input{
     flex: 1;
+    height: 50px;
     border: none;
     padding: 10px;
     font-size: 16px;
-    width: 260px;
+    max-width: 1250px;
+    width: 100%;
     margin: 20px 50px;
 }
 .cards {
-    margin: 0 auto; /* Center the entire grid */
-    
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(369px, 1fr));
+    padding: 20px 20px;
     gap: 40px;
-    padding: 10px;
-    margin-bottom: 20px;
-    justify-items: center; /* Center items inside the grid */
-    /* Optional styles */
-    max-width: 1250px; /* Uncomment if needed to restrict the width */
-    box-shadow: rgba(62, 81, 118, 0.2) 6px 8px; /* Uncomment for a subtle shadow effect */
+    padding-left: 101px;
+    padding-right: 80px;
+    margin: 30px 0px; 
+    justify-items: center;
+   
+    box-shadow: rgba(62, 81, 118, 0.2) 6px 8px;
+}
+ .homecontainer{
+    width: 100%;
+    background-color: aliceblue;
+
+    
+   
+} 
+
+.carddetails {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    max-width: 360px;
+    width: 100%;
+}
+.carddetails h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
 }
 
-.carddetails{
-    background-color: burlywood;
-    width: 400px;
-    /* background-color: aqua; */
-    height: 500px;
-    padding: 26px;
-    /* padding: 50px 15px; */
-    border-radius: 10px;
-   justify-items: center;
-   font-size: 15px;
-   gap: 20px;
+.carddetails p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+@media screen and (max-width: 767px) {
+    .cards {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Single column layout for smaller screens */
+      gap: 20px;
+      padding: 10px;
+    }
+    .carddetails{
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+   
+  }
+.whatweoffer{
+    width: 100%;
+    padding: 50px 20px 30px;
+    margin: 0px;
+     background-color: #f9f9f9;
+     max-width: 872px;
+     text-align: center;
+     justify-content: center;
+     justify-self: center;
+     
+    /* display: grid; */
+}
+.aboutwhatweoofer{
+    justify-items: center;
+    margin: 100px ;
+    
+    
+}
+.aboutwhatweoofer h1{
+font-size: 2rem;
+}
+.aboutwhatweoofer p{
+    margin: 10px 0px;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.2rem;
+    
+}
+@media screen and (max-width: 768) {
+    .aboutwhatweoofer p, .aboutwhatweoofer h1{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }  
+}
+.benefits{
+   justify-self: center; 
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 872px;
+   margin:  0 auto 15px;
+   -webkit-box-pack: center;
    text-align: center;
-   line-height: 2;
-   /* background-color: #fff; */
-   border: 2px solid transparent;
-   border-radius: 8px;
-   box-shadow: rgba(62, 81, 118, 0.2) 0px 8px;
+}
+.benefit-item {
+    display: flex;
+}
+@media (max-width: 767.98px) {
+.benefits .benefit-item {
+        width: 100%;
+        padding: 15px 19px;
+        margin: 0px 0px 10px;
+}
+}
+.benefits .benefit-item {
+    padding: 20px 22px;
+    margin: 0px 7.5px 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(149, 159, 174, 0.2) 0px 2px 6px;
+    border-radius: 5px;
 }

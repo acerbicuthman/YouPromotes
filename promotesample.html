@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Cards</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+        }
+        .card {
+            position: absolute;
+            width: 150px;
+            height: 200px;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container"></div>
+    <script>
+        const container = document.getElementById('container');
+        const numCards = 5;
+        const cards = [];
+        
+        function createCard(index) {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.textContent = `Card ${index + 1}`;
+            container.appendChild(card);
+            cards.push({ element: card, dx: Math.random() * 4 - 2, dy: Math.random() * 4 - 2 });
+        }
+        
+        for (let i = 0; i < numCards; i++) {
+            createCard(i);
+        }
+        
+        function moveCards() {
+            cards.forEach(cardObj => {
+                let rect = container.getBoundingClientRect();
+                let cardRect = cardObj.element.getBoundingClientRect();
+                
+                let newX = cardRect.left + cardObj.dx;
+                let newY = cardRect.top + cardObj.dy;
+                
+                if (newX <= rect.left || newX + cardRect.width >= rect.right) {
+                    cardObj.dx *= -1;
+                }
+                if (newY <= rect.top || newY + cardRect.height >= rect.bottom) {
+                    cardObj.dy *= -1;
+                }
+                
+                cardObj.element.style.transform = `translate(${newX - rect.left}px, ${newY - rect.top}px)`;
+            });
+        }
+        
+        setInterval(moveCards, 50);
+    </script>
+</body>
+</html> -->

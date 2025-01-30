@@ -16,6 +16,16 @@ function dropdown() {
     };
 }
 
+let activeSlide = 0
+const stickLabel = document.querySelector(".slick-slider");
+const cards = document.querySelector(".silde-card")
+
+function setActiveSlide() {
+    activeSlide++
+stickLabel.forEach(content => { content.classList
+    
+});
+}
 
 
 
